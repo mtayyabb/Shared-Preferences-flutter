@@ -21,7 +21,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: BGColor,
         centerTitle: true,
         title: const Text('Registration'),

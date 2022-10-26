@@ -17,10 +17,18 @@ class HomeScreen extends StatelessWidget {
               onPressed: ()async{
                 SharedPreferences sp = await SharedPreferences.getInstance();
                 sp.remove('isLogin');
-                Navigator.push(context,
+                Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => LoginScreen()));
               },
-              icon: Icon(Icons.logout))
+              icon: Icon(Icons.logout)),
+          IconButton(
+              onPressed: ()async{
+                SharedPreferences sp = await SharedPreferences.getInstance();
+                sp.clear();
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()));
+              },
+              icon: Icon(Icons.delete))
         ],
       ),
 

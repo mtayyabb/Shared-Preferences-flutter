@@ -21,6 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: BGColor,
         centerTitle: true,
         title: const Text('Login'),
@@ -124,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 print(email);
                 print(password);
                 if(email == emailController.text.toString() && password == passwordController.text.toString()){
-                  Navigator.push(context,
+                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => HomeScreen()));
                 }
                 else{
