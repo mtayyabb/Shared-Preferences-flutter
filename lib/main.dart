@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-//remove debug red banner
+//remove debugger red banner
       title: 'Shared Preferences',
 
       theme: ThemeData(
